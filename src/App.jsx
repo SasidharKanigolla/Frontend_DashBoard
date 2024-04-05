@@ -71,8 +71,8 @@ function App() {
         <div
           className={
             IsVisible
-              ? ` bg-gray-100  fixed   top-10 left-0 bottom-0 z-[1]  block lg:block w-[300px]`
-              : ` bg-gray-100  hidden lg:hidden   w-[300px]`
+              ? ` bg-gray-100 h-[100vh] fixed overflow-auto top-10 left-0 bottom-0 z-10  block lg:block w-[300px]`
+              : ` bg-gray-100  hidden lg:hidden fixed-element  w-[300px]`
           }
         >
           <div className="px-5 py-4 flex flex-col   ">
@@ -262,7 +262,7 @@ function App() {
         <div className="right flex-1 mt-10  ml-0 lg:ml-[300px]">
           <div className="bg-slate-200  flex justify-between items-center w-full">
             <div className="flex items-center ">
-              <div className="ml-4">
+              <div className="lg:ml-4 md:ml-4 sm:ml-2 ml-1">
                 <button
                   className="bg-slate-200 p-2 block "
                   onClick={() => setIsVisible(true)}
@@ -270,28 +270,33 @@ function App() {
                   <FontAwesomeIcon icon={faBars} style={{ color: "#7d858c" }} />
                 </button>
               </div>
-              <div className="ml-4">
+              <div className="lg:ml-4 md:ml-4 sm:ml-2 ml-1">
                 <FontAwesomeIcon
                   icon={faChevronLeft}
                   style={{ color: "#7d858c" }}
                 />
               </div>
-              <div className="ml-4">
+              <div className="lg:ml-4 md:ml-4 sm:ml-2 ml-1">
                 <FontAwesomeIcon
                   icon={faChevronRight}
                   style={{ color: "#7d858c" }}
                 />
               </div>
 
-              <div className="flex ml-3 ">
-                <div className="mr-3">
+              <div className="flex ml-3 items-center">
+                <div className="lg:mr-3 md:mr-3 sm:mr-2 mr-1">
                   <FontAwesomeIcon icon={faLock} style={{ color: "#7d858c" }} />
                 </div>
-                My private Channels
-                <div className="ml-3">/</div>
-                <div className="ml-4">
-                  <p className="hidden lg:block md:block">👋 Getting started</p>
-                  <p className="block md:hidden lg:hidden">...</p>
+                <div className="">My private Channels</div>
+
+                <div className="lg:ml-3 md:ml-3 sm:ml-3 lg:block md:block sm:block  hidden">
+                  /
+                </div>
+                <div className="lg:ml-4 md:ml-4 sm:ml-2 ml-1">
+                  <p className="hidden lg:block md:block sm:block">
+                    👋 Getting started
+                  </p>
+                  <p className="block md:hidden lg:hidden sm:hidden">...</p>
                 </div>
               </div>
             </div>
@@ -325,16 +330,16 @@ function App() {
                   <div className="flex my-4 p-4 bg-slate-200 rounded-xl">
                     <div>🔒</div>
                     <div>
-                      This doc is in your <b>pricate channel</b>, ehrer you can
-                      store you private work. You can share docs one by one from
-                      here, but to properly organize your team's knowledge base,
-                      use <b>workspace channels</b>.
+                      This doc is in your <b>private channel</b>, enter you can
+                      store your private work. You can share docs one by one
+                      from here, but to properly organize your team's knowledge
+                      base, use <b>workspace channels</b>.
                       <br />
                       <br />
                       You can make channels <b>public</b> to make all docs
                       visible to everyone on the team, or <b>private</b> if you
                       want the channel's docs to only visible by a selection of
-                      templates
+                      teammates
                     </div>
                   </div>
                 </div>
