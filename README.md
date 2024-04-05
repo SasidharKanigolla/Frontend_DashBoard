@@ -1,2 +1,2 @@
 
-[Visit my GitHub repository](https://frontend-dashboard-docs.netlify.app/)
+[Visit my project](https://frontend-dashboard-docs.netlify.app/)
